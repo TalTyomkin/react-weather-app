@@ -8,7 +8,7 @@ import 'bootstrap/dist/js/bootstrap';
 import App from './App';
 import { Provider } from 'react-redux';
 import store from './redux/store/Store';
-import {HashRouter as Router, Route, Switch} from 'react-router-dom';
+import {HashRouter as Router} from 'react-router-dom';
 
 
 ReactDOM.render(

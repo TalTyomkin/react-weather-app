@@ -9,7 +9,7 @@ export const favoritesSlice = createSlice({
     },
     reducers: {
         addFavorite: (state) => {
-            state.myFavorites = [...state.myFavorites, {id:uuid(), city:'natanya', tep: 100}]
+            state.myFavorites = [...state.myFavorites, {}]
         },
         //return an empty "proxy", can't figure out why...
         removeFavorite: (state, action) => {

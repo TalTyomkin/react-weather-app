@@ -11,6 +11,7 @@ const Favorites = () => {
     const [favorites, setFavorites] = useState([]);
     const {myFavorites} = useSelector((state) => state.favoritesState);
     const weatherCastState = useSelector((state) => state.weatherCastState);
+    const inputState = useSelector((state) => state.inputState);
 
     const {Day, Temperature} = weatherCastState.weather.DailyForecasts[0];
     const {Icon,IconPhrase} = Day;
@@ -39,7 +40,7 @@ const Favorites = () => {
                         <Link to='/' className="nav-link active" aria-current="page" href="#" key={uuid()}>
                             <div className="card d-flex align-items-center mt-3 mx-3" style={{width: "15rem",background:'rgba(255,255,255, 0.3)',color:'white'}}>
                                 <div className="card-body">
-                                    <h2 className="card-title " style={{color:'DarkOrange'}}>{f.city}</h2>
+                                    <h2 className="card-title " style={{color:'DarkOrange'}}>{inputState.input[0].LocalizedName}</h2>
                                     <h2 className="">
                                     {Math.floor((Maximum.Value-32)*0.5556)}°C
                                         <img src={`https://www.accuweather.com/images/weathericons/${Icon}.svg`} className="offset-md-1"  style={{width:'6vw'}}  alt="weather" />
